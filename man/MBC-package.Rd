@@ -25,8 +25,9 @@ observed distribution are transferred to the climate model simulations.
 In each of the three methods, marginal distributions are corrected by the
 change-preserving quantile delta mapping (\code{\link{QDM}}) algorithm
 (Cannon et al., 2015). Finally, an implementation of the Rank Resampling for
-Distributions and Dependences (R2D2) method introduced by Vrac (2018) is also
-included.
+Distributions and Dependences (R2D2) method introduced by Vrac (2018), as well as
+multivariate rescaling using the linear Monge-Kantorovich map
+(Pitié and Kokaram, 2007) are also included.
 
 An example application of the three MBC methods using the \code{cccma} dataset
 can be run via:
@@ -76,6 +77,10 @@ Multivariate bias corrections of climate simulations: Which benefits
 for which losses? Earth System Dynamics, 11:537-562.
 doi:10.5194/esd-11-537-2020
 
+Pitié, F., and A. Kokaram, 2007. The linear Monge-Kantorovich linear
+colour mapping for example-based colour transfer. In 4th European
+Conference on Visual Media Production, 1-9 pp. IET.
+
 Vrac, M., 2018. Multivariate bias adjustment of high-dimensional
 climate simulations: the Rank Resampling for Distributions and
 Dependences (R2D2) bias correction. Hydrology and Earth System
@@ -85,7 +90,7 @@ Sciences, 22:3175-3196. doi:10.5194/hess-22-3175-2018
 \keyword{ package }
 
 \seealso{
-\code{\link{QDM}, \link{MBCp}, \link{MBCr}, \link{MBCn}, \link{R2D2}, \link{escore}, \link{rot.random}, \link{cccma}}
+\code{\link{QDM}, \link{MBCp}, \link{MBCr}, \link{MBCn}, \link{R2D2}, \link{MRSmk}, \link{escore}, \link{rot.random}, \link{cccma}}
 }
 
 
@@ -254,5 +259,12 @@ escore.mbcn <- escore(cccma$rcm.p, mbcn.p, scale.x=TRUE)
 cat('ESS (MBCp):', 1-escore.mbcp/escore.qdm, '\n')
 cat('ESS (MBCr):', 1-escore.mbcr/escore.qdm, '\n')
 cat('ESS (MBCn):', 1-escore.mbcn/escore.qdm, '\n')
+
+# Post-process QDM using MRSmk
+fit.qdmmk <- MRSmk(o.c=cccma$rcm.c, m.c=cccma$gcm.c, m.p=cccma$gcm.p,
+                   mhat.c=qdm.c, mhat.p=qdm.p)
+escore.qdmmk <- escore(cccma$rcm.p, fit.qdmmk$mhat.p, scale.x=TRUE)
+cat('ESS (QDMmk):', 1-escore.qdmmk/escore.qdm, '\n')
+
 }
 }

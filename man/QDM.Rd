@@ -67,7 +67,7 @@ QDM(o.c, m.c, m.p, ratio=FALSE, trace=0.05, trace.calc=0.5*trace,
 }
 
 \seealso{
-\code{\link{MBCp}, \link{MBCr}, \link{MRS}, \link{escore}}
+\code{\link{MBCp}, \link{MBCr}, \link{MRS}, \link{MRSmk}, \link{escore}}
 }
 \references{
 Cannon, A.J., S.R. Sobie, and T.Q. Murdock, 2015. Bias correction

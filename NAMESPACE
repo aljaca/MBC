@@ -1,5 +1,6 @@
 # Export all names
 export(MRS)
+export(MRSmk)
 export(MBCr)
 export(MBCp)
 export(MBCn)
@@ -10,4 +11,4 @@ export(escore)
 importFrom("FNN", "knnx.index")
 importFrom("energy", "edist")
 importFrom("Matrix", "nearPD")
-importFrom("stats", "approx", "cor", "cov", "quantile", "rnorm", "runif", "sd")
+importFrom("stats", "approx", "cor", "cov", "qnorm", "quantile", "rnorm", "runif", "sd")

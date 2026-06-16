@@ -69,7 +69,7 @@ R2D2(o.c, m.c, m.p, ref.column=1, ratio.seq=rep(FALSE, ncol(o.c)),
 }
 
 \seealso{
-\code{\link{QDM}, \link{MBCp}, \link{MBCr}, \link{MRS}, \link{MBCn}}
+\code{\link{QDM}, \link{MBCp}, \link{MBCr}, \link{MRS}, \link{MRSmk}, \link{MBCn}}
 }
 \references{
 Cannon, A.J., S.R. Sobie, and T.Q. Murdock, 2015. Bias correction

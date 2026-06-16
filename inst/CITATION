@@ -1,28 +1,8 @@
-citation(auto = meta)
+citHeader("To cite package 'MBC' in publications use:")
 
-bibentry(bibtype = "Article",
-         title = "Multivariate quantile mapping bias correction: An N-dimensional probability density function transform for climate model simulations of multiple variables",
-         author = person(c("Alex", "J."), "Cannon"),
-         year = "2018",
-         journal = "Climate Dynamics",
-         volume = "50(1-2)",
-         pages = "31-49",
-         doi = "10.1007/s00382-017-3580-6")
-
-bibentry(bibtype = "Article",
-         title = "Multivariate bias correction of climate model output: Matching marginal distributons and inter-variable dependence structure",
-         author = person(c("Alex", "J."), "Cannon"),
-         year = "2016",
-         journal = "Journal of Climate",
-         volume = "29",
-         pages = "7045-7064",
-         doi = "10.1175/JCLI-D-15-0679.1")
-
-bibentry(bibtype = "Article",
-         title = "Bias correction of GCM precipitation by quantile mapping: How well do methods preserve changes in quantiles and extremes?",
-         author = as.person("Alex J. Cannon [aut], Stephen R. Sobie [aut], Trevor Q. Murdock [aut]"),
-         year = "2015",
-         journal = "Journal of Climate",
-         volume = "28",
-         pages = "6938-6959",
-         doi = "10.1175/JCLI-D-14-00754.1")
+bibentry(bibtype = "Manual",
+  title = "MBC: Multivariate Bias Correction of Climate Model Outputs",
+  author = c(person(given = "Alex J.", family = "Cannon")),
+  year = "2026",
+  note = "R package version 0.10-8",
+  textVersion = "Cannon, A.J. (2026). MBC: Multivariate Bias Correction of Climate Model Outputs. R package version 0.10-8.")
