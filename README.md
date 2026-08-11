@@ -1,3 +1,3 @@
-# MBC
+# MBC: Multivariate Bias Correction of Climate Model Outputs
 
 Calibrate and apply multivariate bias correction algorithms for climate model simulations of multiple climate variables. Three methods described by Cannon (2016) <doi:10.1175/JCLI-D-15-0679.1> and Cannon (2018) <doi:10.1007/s00382-017-3580-6> are implemented – (i) MBC Pearson correlation (MBCp), (ii) MBC rank correlation (MBCr), and (iii) MBC N-dimensional PDF transform (MBCn) – as is the Rank Resampling for Distributions and Dependences (R2D2) method. An additional multivariate rescaling method based on the linear Monge-Kantorovich map for Gaussian optimal transport of dependence structure is also included.
